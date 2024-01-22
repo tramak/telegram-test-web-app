@@ -1,9 +1,12 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.css"
+import {Close} from "@/conponents/Close";
 
 export default function Home() {
+
   return (
     <main className={styles.main}>
+      <Close />
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;

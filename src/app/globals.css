@@ -1,3 +1,9 @@
+
+body {
+  background: var(--tg-theme-bg-color);
+  color: var(--tg-theme-text-color);
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
