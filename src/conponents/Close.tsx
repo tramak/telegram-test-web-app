@@ -1,7 +1,11 @@
 'use client';
 
 const getTelegram = ():any => {
-  return (window as any).Telegram?.WebApp;
+  if (typeof(window) !== 'undefined') {
+    return (window as any)?.Telegram?.WebApp;
+  }
+
+  return undefined
 }
 export const Close = () => {
   const tg = getTelegram();
