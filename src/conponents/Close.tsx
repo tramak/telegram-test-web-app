@@ -29,10 +29,10 @@ export const Close = () => {
     <div>
       Имя пользователя: {tg?.initDataUnsafe?.user?.username}
       <br />
-      {JSON.stringify(tg)}
+      {JSON.stringify((window as any)?.Telegram)}
 
       <button onClick={handlerClick}>
-        Закрыть!
+        Закрыть!!!
       </button>
     </div>
   );
