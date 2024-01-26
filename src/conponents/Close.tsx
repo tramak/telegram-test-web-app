@@ -3,15 +3,9 @@ import {useTelegram} from "@/conponents/useTelegram";
 import {useEffect} from "react";
 
 export const Close = () => {
-  const { telegram, init } = useTelegram();
-
-  useEffect(() => {
-    console.log('test!!!')
-  }, []);
-
+  const { telegram } = useTelegram();
   const handlerClick = () => {
     telegram?.WebApp.close();
-    alert('test');
   };
 
   return (
@@ -22,9 +16,6 @@ export const Close = () => {
       <button onClick={handlerClick}>
         Закрыть!!
       </button>
-
-      {init ? 'init': 'no init'}
-      {JSON.stringify(telegram)}
     </div>
   );
 }
