@@ -2,7 +2,7 @@
 import {useTelegram} from "@/conponents/useTelegram";
 
 export const Close = () => {
-  const { telegram } = useTelegram();
+  const { telegram, init } = useTelegram();
 
   const handlerClick = () => {
     telegram?.WebApp.close();
@@ -14,9 +14,10 @@ export const Close = () => {
       <br />
 
       <button onClick={handlerClick}>
-        Закрыть!!!
+        Закрыть!!
       </button>
 
+      {init ? 'init': 'no init'}
       {JSON.stringify(telegram)}
     </div>
   );
