@@ -3,6 +3,7 @@
 const getTelegram = ():any => {
   try {
     if (typeof (window) !== 'undefined') {
+      alert(window);
       return (window as any)?.Telegram;
     }
 
