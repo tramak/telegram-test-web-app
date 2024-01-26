@@ -18,6 +18,8 @@ export const Close = () => {
     <div>
       Имя пользователя: {tg?.initDataUnsafe?.user?.username}
       <br />
+      {JSON.stringify(tg)}
+
       <button onClick={handlerClick}>
         Закрыть
       </button>
