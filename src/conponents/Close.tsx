@@ -1,11 +1,17 @@
 'use client';
 import {useTelegram} from "@/conponents/useTelegram";
+import {useEffect} from "react";
 
 export const Close = () => {
   const { telegram, init } = useTelegram();
 
+  useEffect(() => {
+    console.log('test!!!')
+  }, []);
+
   const handlerClick = () => {
     telegram?.WebApp.close();
+    alert('test');
   };
 
   return (
