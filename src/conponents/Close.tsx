@@ -1,40 +1,23 @@
 'use client';
+import {useTelegram} from "@/conponents/useTelegram";
 
-const getTelegram = ():any => {
-  try {
-    if (typeof (window) !== 'undefined') {
-      alert(window);
-      return (window as any)?.Telegram;
-    }
-
-    return undefined
-  } catch (e) {
-    return {
-      initDataUnsafe: {
-        user: {
-          username: JSON.stringify(e),
-        }
-      },
-      close: () => void 0
-    }
-  }
-}
 export const Close = () => {
-  const tg = getTelegram();
+  const { telegram } = useTelegram();
 
   const handlerClick = () => {
-    tg?.WebApp.close();
+    telegram?.WebApp.close();
   };
 
   return (
     <div>
-      Имя пользователя: {tg?.WebApp.initDataUnsafe?.user?.username}
+      Имя пользователя: {telegram?.WebApp.initDataUnsafe?.user?.username}
       <br />
-      {tg}
 
       <button onClick={handlerClick}>
-        Закрыть!
+        Закрыть!!
       </button>
+
+      {JSON.stringify(telegram)}
     </div>
   );
 }
