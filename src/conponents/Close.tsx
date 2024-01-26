@@ -21,7 +21,7 @@ export const Close = () => {
       {JSON.stringify(tg)}
 
       <button onClick={handlerClick}>
-        Закрыть
+        Закрыть!!
       </button>
     </div>
   );
