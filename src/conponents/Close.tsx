@@ -3,7 +3,7 @@
 const getTelegram = ():any => {
   try {
     if (typeof (window) !== 'undefined') {
-      return (window as any)?.Telegram?.WebApp;
+      return (window as any)?.Telegram;
     }
 
     return undefined
@@ -22,17 +22,17 @@ export const Close = () => {
   const tg = getTelegram();
 
   const handlerClick = () => {
-    tg?.close();
+    tg?.WebApp.close();
   };
 
   return (
     <div>
-      Имя пользователя: {tg?.initDataUnsafe?.user?.username}
+      Имя пользователя: {tg?.WebApp.initDataUnsafe?.user?.username}
       <br />
-      {JSON.stringify((window as any)?.Telegram)}
+      {tg}
 
       <button onClick={handlerClick}>
-        Закрыть!!!
+        Закрыть!
       </button>
     </div>
   );
