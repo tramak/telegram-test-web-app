@@ -14,7 +14,7 @@ export const Close = () => {
       <br />
 
       <button onClick={handlerClick}>
-        Закрыть!!
+        Закрыть!!!
       </button>
 
       {JSON.stringify(telegram)}
