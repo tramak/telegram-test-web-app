@@ -12,9 +12,12 @@ export const Close = () => {
     <div>
       Имя пользователя: {telegram?.WebApp.initDataUnsafe?.user?.username}
       <br />
-      <pre>
+      <div style={{
+        maxWidth: '100%',
+        wordBreak: 'break-all',
+      }}>
         {JSON.stringify(telegram?.WebApp.initData!)}
-      </pre>
+      </div>
 
       <button onClick={handlerClick}>
         Закрыть
