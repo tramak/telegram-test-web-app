@@ -1,6 +1,6 @@
 'use client';
 
-import {useEffect, useMemo, useState} from "react";
+import { useEffect, useState } from "react";
 
 export const useTelegram = () => {
   const [telegram, setTelegram] = useState<any>();
