@@ -16,8 +16,8 @@ export const Close = () => {
         id: telegram?.WebApp.initDataUnsafe?.user?.id,
       })
       .then(function (response) {
-      console.log(response);
-    })
+        console.log(response);
+      })
   }
 
   return (
