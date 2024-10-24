@@ -245,10 +245,10 @@
     return null;
   }
 
-  if (!window.Telegram) {
+  if (!window.TelegramV2) {
     window.Telegram = {};
   }
-  window.Telegram.WebView = {
+  window.TelegramV2.WebView = {
     initParams: initParams,
     isIframe: isIframe,
     onEvent: onEvent,
@@ -258,7 +258,7 @@
     callEventCallbacks: callEventCallbacks
   };
 
-  window.Telegram.Utils = {
+  window.TelegramV2.Utils = {
     urlSafeDecode: urlSafeDecode,
     urlParseQueryString: urlParseQueryString,
     urlParseHashParams: urlParseHashParams,
@@ -278,8 +278,8 @@
 
 // WebApp
 (function () {
-  var Utils = window.Telegram.Utils;
-  var WebView = window.Telegram.WebView;
+  var Utils = window.TelegramV2.Utils;
+  var WebView = window.TelegramV2.WebView;
   var initParams = WebView.initParams;
   var isIframe = WebView.isIframe;
 
@@ -325,7 +325,7 @@
   function onThemeChanged(eventType, eventData) {
     if (eventData.theme_params) {
       setThemeParams(eventData.theme_params);
-      window.Telegram.WebApp.MainButton.setParams({});
+      window.TelegramV2.WebApp.MainButton.setParams({});
       updateBackgroundColor();
       receiveWebViewEvent('themeChanged');
     }
@@ -1270,7 +1270,7 @@
     WebView.postEvent('web_app_invoke_custom_method', false, req_params);
   };
 
-  if (!window.Telegram) {
+  if (!window.TelegramV2) {
     window.Telegram = {};
   }
 
@@ -1677,7 +1677,7 @@
     WebView.postEvent('web_app_close');
   };
 
-  window.Telegram.WebApp = WebApp;
+  window.TelegramV2.WebApp = WebApp;
 
   updateHeaderColor();
   updateBackgroundColor();
